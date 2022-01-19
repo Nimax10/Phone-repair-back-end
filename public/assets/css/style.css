@@ -1,0 +1,604 @@
+@font-face {
+	font-family: Raleway-Light;
+	src: url(fonts/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: Raleway-Bold;
+	src: url(fonts/Raleway-Bold.ttf);
+}
+@font-face {
+	font-family: Raleway-Medium;
+	src: url(fonts/Raleway-Medium.ttf);
+}
+
+@media screen and (max-device-width: 1150px) {
+    .logo-info-item:not(:first-child) {
+        display: none;
+    }
+    .m-description {
+        bottom: 5%;
+        margin: 10px;
+    }
+
+}
+@media screen and (max-device-width: 800px) {
+    .imgs-ph-mod {
+        display: none;
+    }
+    div.pr-list-phones a {
+        display: none;
+    }
+    .pr-list-phones {
+        justify-content: center;
+    }
+}
+@media screen and (max-device-width: 550px) {
+    .sec-logo-info button {
+        display: none;
+    }
+    .sec-logo-info {
+        justify-content: baseline;
+    }
+    .burg-button {
+        visibility: visible;
+    }
+    .sec-links {
+        display: none;
+    }
+    .u-li {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .phone-models-price-two {
+        display: none;
+    }
+    .map div {
+        display: none;
+    }
+}
+@media screen and (max-device-width: 650px) {
+    .m-description {
+        font-size: 8pt;
+    }
+}
+@media screen and (min-device-width: 551px) {
+    .m-description {
+        font-size: 11pt;
+    }
+}
+@media screen and (min-device-width: 551px) {
+	.burg-button {
+        visibility: hidden;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Raleway-Light;
+}
+.transition-buttons {
+    transition: background .3s, color .3s;
+    cursor: pointer;
+}
+
+.callback {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.callback-menu {
+    /* height: 55%; */
+    padding: 10px;
+    background: rgb(255, 180, 100);
+}
+.text-c {
+    font-size: 12pt;
+}
+.input-c {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.textarea-c {
+    display: block;
+    margin-top: 3px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    height: 85px;
+    width: 100%;
+    box-shadow: inset 1px 1px 2px rgb(100 100 100 / 15%);
+    box-sizing: border-box;
+    resize: none;
+}
+.button-c {
+    width: 100%;
+    height: 60px;
+	background: rgba(120, 120, 120, 0.0);
+	font-size: 14pt;
+	color: black;
+	border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: background .3s, color .3s;
+}
+.button-c:hover {
+    background: white;
+	color: black;
+    cursor: pointer;
+}
+
+.header {
+    /* height: 200px; */
+    background-color: rgb(235, 235, 235);
+}
+
+.sec-logo-info {
+    /* height: 150px; */
+    /* width: 70%; */
+    margin: 0 5%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.logo-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+#text-logo {
+    display: inline-block;
+    margin-left: 5px;
+        /*  верх право низ лево */
+    height: 90px;
+    width: 140px;
+    font-size: 19pt;
+}
+.sec-logo-info button  {
+    width: 120px;
+    height: 60px;
+	background: rgba(120, 120, 120, 0.0);
+	font-size: 14pt;
+	color: black;
+	border: 4px solid rgb(255, 180, 100);
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.sec-logo-info button:hover, .sec-logo-info button.activeButton {
+    background: rgb(255, 180, 100);
+}
+
+.sec-links {
+    /* height: 50px; */
+    background-color: rgb(100, 100, 100);
+}
+.links {
+    /* width: 60%; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.links button {
+    margin: 3px 3px;
+    width: 160px;
+    height: 50px;
+	background: rgb(120, 120, 120);
+	font-size: 14pt;
+	color: white;
+	border: none;
+    box-sizing: border-box;
+}
+.links button:hover, .links .activeButton {
+	background: rgb(255, 180, 100);
+	color: black;
+}
+.burg-button {
+    cursor: pointer;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    background: rgba(190, 190, 190, 0.6);
+    padding: 2px;
+    z-index: 900;
+}
+.burg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 950;
+}
+.burg-links {
+    margin: 0 auto;
+    margin-top: 33%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.burg-links button {
+    margin: 3px 3px;
+    width: 250px;
+    height: 50px;
+	background: rgb(120, 120, 120);
+	font-size: 14pt;
+	color: white;
+	border: none;
+    box-sizing: border-box;
+}
+.burg-links button:hover, .burg-links.activeButton {
+	background: rgb(255, 180, 100);
+	color: black;
+}
+
+
+.width-seventeen {
+    width: 70%;
+}
+
+.margin {
+    margin: 20px auto 0 auto;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.main {
+    background-color: white;
+}
+
+
+.m-one {
+    /* margin-top: 20px; */
+    position: relative;
+    height: 300px;
+    border: 3px solid rgb(255, 180, 100);
+    border-image: linear-gradient(to right bottom, rgb(255, 180, 100) 10%,  transparent 30%, transparent 70%, rgb(255, 120, 60) 90%);
+    border-image-slice: 1;
+}
+.m-one img {
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+.active {
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.m-bookmark {
+    width: 200px; 
+    height: 100px; 
+    background: linear-gradient(to right, rgb(255, 180, 100), rgb(255, 120, 60)); 
+    position: absolute; 
+    top: 10px; 
+    left: 20px; 
+    z-index: 2; 
+    border-radius: 20px;
+    
+    font-family: Raleway-Bold;
+    font-size: 22pt;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-description {
+    padding: 10px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 2%; 
+    z-index: 2;
+    border-radius: 10px;
+
+    font-family: Raleway-Light;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.m-ome-img {
+    width: 100%; 
+    height: 300px; 
+    z-index: 1;
+}
+.m-t-img {
+    /* display: flex;
+    justify-content: space-around; */
+    text-align: center;
+}
+.m-t-img-text {
+    display: flex;
+    justify-content: space-around;
+}
+.text-m {
+    display: block;
+    text-align: center;
+    width: 100px;
+}
+.m-two div span {
+    font-family: Raleway-Medium;
+}
+.m-three {
+    display: flex;
+    justify-content: space-around;
+    background: rgba(128, 183, 255, 0.2);
+    border: 3px solid rgba(255, 180, 100, 0.7);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.m-three h2 {
+    margin-top: 5px;
+    color: rgb(0, 110, 255); 
+    font-family: Raleway-Bold; 
+    text-align: center;
+}
+
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+.map div {
+    position: absolute; 
+    padding: 0 10px;
+    height: 100%; 
+    left: 20%; 
+    z-index: 2; 
+    background: rgba(255, 255, 240, 0.9);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .3);
+}
+.map div span {
+    display: block;
+    margin: 40px 0 0 0px;
+    font-size: 10pt;
+}
+
+
+.footer {
+    padding: 10px 0;
+    background: rgb(235, 235, 235);
+    font-size: 11pt;
+    
+}
+.f-copyright {
+    text-align: center;
+}
+.f-text {
+    display: block;
+    width: 300px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+.f-address {
+    text-align: center;
+}
+.f-links {
+    text-align: center;
+}
+
+
+.breadcrumbs {
+    background: linear-gradient(to bottom, rgb(210, 210, 210) 60%, rgb(255, 255, 255) 100%); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.breadcrumb {
+    list-style: none;
+    font-size: 16pt;
+}
+.breadcrumb li {
+    display: inline;
+    cursor: pointer;
+}
+.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+.text-warn {
+    border-left: 4px solid #009ad3;
+    background: rgba(168, 255, 255, 0.4);
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.a-warning {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 120, 120, 0.5);
+    display: flex;
+    text-align: center;
+    font-size: 18pt;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    flex-wrap: wrap;
+}
+
+.u-ul {
+    display: flex;
+    width: 70%;
+    margin: 20px auto 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.u-li {
+    display: block;
+    font-family: Raleway-Bold;
+    font-size: 14pt;
+}
+
+.contacts-menu {
+    padding: 10px;
+    height: 450px;
+}
+.text-co {
+    font-size: 12pt;
+}
+.input-co {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+.textarea-co {
+    display: block;
+    margin-top: 3px;
+    border: 1px solid black;
+    padding: 5px 10px;
+    height: 85px;
+    width: 100%;
+    box-shadow: inset 1px 1px 2px rgb(100 100 100 / 15%);
+    box-sizing: border-box;
+    resize: none;
+}
+.button-co {
+    width: 100%;
+    height: 60px;
+	background: rgba(120, 120, 120, 0.0);
+	font-size: 14pt;
+	color: black;
+	border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: background .3s, color .3s;
+}
+.button-co:hover {
+    background: white;
+	color: black;
+    cursor: pointer;
+}
+.pr-list-phones {
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+.pr-list-phones img {
+    cursor: pointer;
+}
+
+.imgs-ph-mod {
+    height: 100px;
+}
+.imgs-ph-mod img {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.imgs-ph-mod a, .pr-list-phones a {
+    text-align: center;
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+    color: cornflowerblue;
+}
+
+.leave-request {
+    width: 200px;
+    height: 60px;
+	background: rgba(120, 120, 120, 0.0);
+	font-size: 14pt;
+	color: black;
+	border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: background .3s, color .3s;
+}
+.leave-request:hover {
+    background: rgb(255, 180, 100);
+	color: black;
+    cursor: pointer;
+}
+.p-m-list-models {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.p-m-list-models img {
+    cursor: pointer;
+}
+.p-m-list-models a {
+    text-align: center;
+    display: block;
+    text-decoration: underline;
+    cursor: pointer;
+    color: cornflowerblue;
+}
+.phone-models-price tr {
+    width: 100%;
+}
+.phone-models-price td {
+    width: 50%;
+    height: 40px;
+    border: 2px solid black;
+    text-align: center;
+}
+.phone {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.phone-text {
+    width: 70%;
+}
+.list-types {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.type-repair {
+    width: 160px;
+    height: 60px;
+	background: rgba(120, 120, 120, 0.0);
+	font-size: 12pt;
+	color: black;
+	border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    transition: background .3s, color .3s;
+    margin: 0 1px;
+    margin-bottom: 4px;
+}
+.type-repair:hover, .type-repair.activeButton {
+    background: rgb(171, 228, 255);
+	color: black;
+    cursor: pointer;
+}
+.phone-models-price-two td {
+    height: 60px;
+    border: 2px solid black;
+    text-align: center;
+}
